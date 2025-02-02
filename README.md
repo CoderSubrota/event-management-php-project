@@ -99,7 +99,7 @@ If the website doesn't load properly, you can set up and run the project locally
 ---
 
 ## **GitHub Repository**
-📌 [GitHub Repository](https://github.com/CoderSubrota/event-management)
+📌 [GitHub Repository](https://github.com/CoderSubrota/event-management-php-project)
 
 ---
 
@@ -117,7 +117,7 @@ If the website doesn't load properly, you can set up and run the project locally
 ## **How to Set Up Locally?**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/CoderSubrota/event-management.git
+https://github.com/CoderSubrota/event-management-php-project.git
    ```
 2. Import the database from the `database` directory in the GitHub repository.
 3. Run a local server using XAMPP or WAMP.
@@ -153,7 +153,7 @@ Password: Subrota7867@%
 ---------------------------------
 ---------------------------------
 
-# <<<< Kindly check this code using localhost live website is not working >>>>
+#  Kindly check this code using localhost live website is not working 
 
 ---------------------------------
 ---------------------------------
