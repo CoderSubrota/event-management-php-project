@@ -17,7 +17,7 @@ if (isset($_POST['next'])) {
     $email = mysqli_real_escape_string($connection, $_POST['email']);
    
     // Fetch user details
-    $select = "SELECT email, user_password FROM users WHERE email = '$email'";
+    $select = "SELECT email, password FROM users WHERE email = '$email'";
     $result = mysqli_query($connection, $select);
 
     if ($result && mysqli_num_rows($result) > 0) {

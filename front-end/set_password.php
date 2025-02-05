@@ -56,10 +56,10 @@ require_once "../back-end/config.php";
             exit() ;
         } else{
             
-            $update_password = "UPDATE users SET user_password='$hash_password' WHERE email='" . $_SESSION['email'] . "'";
+            $update_password = "UPDATE users SET password='$hash_password' WHERE email='" . $_SESSION['email'] . "'";
             $result= mysqli_query($connection, $update_password) ;
             if( $result ) {
-                header("location:../login_page.php") ;
+                header("location:./login_page.php") ;
             }else{
                 ?>
                 <script>

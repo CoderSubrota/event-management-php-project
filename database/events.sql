@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Feb 02, 2025 at 12:52 PM
+-- Generation Time: Feb 05, 2025 at 02:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `event-management`
+-- Database: `event_management`
 --
 
 -- --------------------------------------------------------
@@ -41,14 +41,11 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `name`, `description`, `date`, `max_capacity`, `created_by`) VALUES
-(1, 'Birth day party', '                                                                                                                                            We will dance to night\r\n                                                                                                                                                   ', '2025-01-21', 3, 1),
-(2, 'Halloin tonight', '                                                                                                 Halloin tonight all the night                                                                                                                                                ', '2025-01-07', 28, 1),
-(5, 'Tammi', 'Tammi is greate', '2025-01-20', 21, 1),
-(6, 'Job Event', '                                My friend got a job in Microsoft as a AI specialist.                                ', '2025-02-04', 7, 1),
-(7, 'Birth day party', 'This is my birthday party', '2025-02-05', 12, 5),
-(8, 'Wedding party', 'This is the wedding party of my brother', '2025-02-04', 28, 2),
-(11, 'Halloin tonight', 'This is halloin', '2025-02-04', 24, 2),
-(12, 'Happy Dipaboli', 'This is dipaboli  event', '2025-02-12', 15, 2);
+(4, 'Birthday party', 'This is my cousin birthday party', '2025-02-07', 22, 1),
+(5, 'Being simple', 'A simple and straightforward name can be effective. ', '2025-02-12', 10, 1),
+(6, 'Using wordplay', 'You can use puns, double meanings, or change a letter or vowel to make the name stand out. ', '2025-02-06', 12, 1),
+(7, 'inspired by nature', 'You can use names inspired by nature, like Crystal Waterfall Event Planning or Aspen Glade Weddings & Events. ', '2025-02-13', 22, 1),
+(8, 'PlayPalooza Party', '                                                                 A simple and straightforward event name                                                                ', '2025-02-04', 15, 2);
 
 --
 -- Indexes for dumped tables
@@ -69,7 +66,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
@@ -79,7 +76,7 @@ ALTER TABLE `events`
 -- Constraints for table `events`
 --
 ALTER TABLE `events`
-  ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`created_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

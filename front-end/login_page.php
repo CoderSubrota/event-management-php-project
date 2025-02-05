@@ -19,12 +19,12 @@ if (isset($_POST['login'])) {
     $password = $_POST['password']; 
 
     // Fetch user details
-    $select = "SELECT email, user_password FROM users WHERE email = '$email'";
+    $select = "SELECT email, password FROM users WHERE email = '$email'";
     $result = mysqli_query($connection, $select);
 
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        $hashed_password = $row['user_password'];
+        $hashed_password = $row['password'];
 
         // Verify password
         if (password_verify($password, $hashed_password)) {

@@ -35,10 +35,7 @@
                        icon: "info",
                        timer: 2500
                    });
-                   setTimeout(() => {
-                    window.location="./register_page.php" ;
-                   }, 2500);
-                 </script>;
+                 </script>
             <?php 
         }
         // Check if password meets the strength criteria
@@ -51,9 +48,6 @@
                        icon: "info",
                        timer: 4500
                    });
-                   setTimeout(() => {
-                    window.location="./register_page.php" ;
-                   }, 4500);
                  </script>
             <?php
             exit() ;
@@ -74,7 +68,7 @@
                    });
                  </script>';
         } else {
-            $insert = "INSERT INTO users(full_name, email, user_password) VALUES ('$full_name', '$email', '$hash_password')";
+            $insert = "INSERT INTO users(name, email, password) VALUES ('$full_name', '$email', '$hash_password')";
 
             if (mysqli_query($connection, $insert)) {
                 $_SESSION['message'] = 'New user '. $full_name . ' added successfully !!' ; 
@@ -88,9 +82,6 @@
                         icon: "warning",
                         timer: 3500
                     });
-                    setTimeout(() => {
-                        window.location="./register_page.php" ;
-                   }, 3500);
                 </script>
                 <?php
             }

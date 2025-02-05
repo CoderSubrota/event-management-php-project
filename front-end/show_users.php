@@ -59,7 +59,7 @@ if( isset($_SESSION['message']) && $_SESSION['message']!='' ){
                     <tr>
                         <td><?= htmlspecialchars($serial) ?></td>
                         <td><?= htmlspecialchars($user['id']) ?></td>
-                        <td><?= htmlspecialchars($user['full_name']) ?></td>
+                        <td><?= htmlspecialchars($user['name']) ?></td>
                         <td><?= htmlspecialchars($user['email']) ?></td>
                         <td> <a href="./update-user.php?user_id=<?php echo $user['id'] ;?>"> <i class="fa-solid fa-edit text-success"></i> </a>  </td>
                         <td> <a href="../back-end/delete_user.php?user_id=<?php echo $user['id'] ;?>" onclick="return confirm('Are you want to delete this data ?')"> <i class="fa-solid fa-trash text-danger"></i> </a>  </td>

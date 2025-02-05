@@ -12,13 +12,14 @@ I created a MariaDB database to store and manage user, event, and participant in
 
 #### **Database Queries**
 ```sql
-CREATE DATABASE event-management;
+
+CREATE DATABASE event_management;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL
+    email VARCHAR(245) UNIQUE NOT NULL,
+    password VARCHAR(235) NOT NULL
 );
 
 CREATE TABLE events (
@@ -28,23 +29,20 @@ CREATE TABLE events (
     date DATE NOT NULL,
     max_capacity INT NOT NULL,
     created_by INT NOT NULL,
-    FOREIGN KEY (created_by) REFERENCES users(id)
+    FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
 
 CREATE TABLE attendees (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    event_id INT NOT NULL,
-    user_id INT NOT NULL,
-    FOREIGN KEY (event_id) REFERENCES events(id),
-    FOREIGN KEY (user_id) REFERENCES users(id)
-);
-
-CREATE TABLE participants (
      id INT AUTO_INCREMENT PRIMARY KEY,
+     created_by INT(28),
      full_name VARCHAR(225),
      email VARCHAR(252) UNIQUE NOT NULL,
-     event_id INT(28)
+     event_id INT(28),
+     FOREIGN KEY(created_by) REFERENCES users(id) ON DELETE CASCADE  ON UPDATE CASCADE,
+     FOREIGN KEY(event_id) REFERENCES events(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
 ```
 
 ### **Database Connection**
@@ -54,7 +52,7 @@ The database is connected to the localhost using the following PHP script:
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "event-management";
+$database = "event_management";
 $port = 3308;
 
 $connection = mysqli_connect($host, $username, $password, $database, $port);
@@ -135,20 +133,7 @@ https://github.com/CoderSubrota/event-management-php-project.git
 This project demonstrates a structured approach to full-stack web development, covering database management, backend development, frontend design, and deployment. 🚀
 
 
->>  You can check this code locally if the provided live website link showing some error. You can get my database in GitHub Repository just go to the database directory you will get the database.
-
-
-# User login information
-
-# Authenticate user login information
-
-Email: davidkrish22@gmail.com
-Password : David1234### 
-
-# Admin login information:
-
-Email: subrota12@gmail.com
-Password: Subrota7867@%
+>>> You can check this code locally if the provided live website link showing some error. You can get my database in GitHub Repository just go to the database directory you will get the database.
 
 ---------------------------------
 ---------------------------------

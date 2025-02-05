@@ -4,7 +4,7 @@
 $host = "localhost"; 
 $username = "root";
 $password = "";
-$database = "event-management";
+$database = "event_management";
 $port = 3308;
 
 $connection = mysqli_connect($host, $username, $password, $database, $port);

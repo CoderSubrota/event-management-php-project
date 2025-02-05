@@ -32,12 +32,12 @@
         $row = mysqli_fetch_assoc($get_events);
         $max_capacity = $row['max_capacity'];
         // check participant for event
-        $get_participant = "SELECT * FROM participants WHERE event_id='$event_id'";
-        $participants = mysqli_query($connection, $get_participant);
-        $participants_row = mysqli_num_rows($participants);
-        //Is  participants data are empty
-        if ($participants_row  == 0 ) {
-            $insert = "INSERT INTO participants(full_name, email,event_id) VALUES ('$full_name', '$email', '$event_id')";
+        $get_participant = "SELECT * FROM attendees WHERE event_id='$event_id'";
+        $attendees = mysqli_query($connection, $get_participant);
+        $attendees_row = mysqli_num_rows($attendees);
+        //Is  attendees data are empty
+        if ($attendees_row  == 0 ) {
+            $insert = "INSERT INTO attendees(created_by, full_name, email,event_id) VALUES ('$user_id','$full_name', '$email', '$event_id')";
             $insertParticipant = mysqli_query($connection, $insert);
             if ($insertParticipant) {
               // insert data to attendees
@@ -50,8 +50,8 @@
             }
         }
         //check the event capacity
-        if (intval($max_capacity) > intval($participants_row)) {
-            $insert = "INSERT INTO participants(full_name, email,event_id) VALUES ('$full_name', '$email', '$event_id')";
+        if (intval($max_capacity) > intval($attendees_row)) {
+            $insert = "INSERT INTO attendees(created_by, full_name, email,event_id) VALUES ('$user_id','$full_name', '$email', '$event_id')";
             $insertParticipant = mysqli_query($connection, $insert);
             if ($insertParticipant) {
              // insert data to attendees

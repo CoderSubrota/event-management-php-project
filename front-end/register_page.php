@@ -59,7 +59,7 @@
             exit() ;
         } else{
 
-        $hash_password = password_hash($get_password, PASSWORD_DEFAULT);
+        $hash_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Check if the email already exists
         $select = "SELECT * FROM users WHERE email = '$email'";
@@ -74,7 +74,8 @@
                    });
                  </script>';
         } else {
-            $insert = "INSERT INTO users(full_name, email, user_password) VALUES ('$full_name', '$email', '$hash_password')";
+            
+            $insert = "INSERT INTO users(name, email,password) VALUES('$full_name','$email','$hash_password')";
 
             if (mysqli_query($connection, $insert)) {
                 header("Location: ./login_page.php");

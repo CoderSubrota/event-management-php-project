@@ -60,7 +60,7 @@ if (isset($_SESSION['email']) && $_SESSION['email'] == "subrota12@gmail.com") {
             } else {
 
                 $hash_password = password_hash($password, PASSWORD_DEFAULT);
-                $update_user = "UPDATE users SET full_name='$full_name', email='$email', user_password='$hash_password' WHERE id='$user_id'";
+                $update_user = "UPDATE users SET name='$full_name', email='$email', password='$hash_password' WHERE id='$user_id'";
                 if (mysqli_query($connection, $update_user)) {
 
                     $_SESSION['message'] = "User " . $full_name . " data updated successfully !!";
@@ -92,7 +92,7 @@ if (isset($_SESSION['email']) && $_SESSION['email'] == "subrota12@gmail.com") {
                 </div>
 
                 <div class="mb-3">
-                    <input type="text" name="full_name" value="<?php echo $user_data['full_name']; ?>"
+                    <input type="text" name="full_name" value="<?php echo $user_data['name']; ?>"
                         placeholder="Enter your full name" class="form-control" required />
                     <div class="invalid-feedback">Please enter your real name.</div>
                     <div class="valid-feedback">Looks good!</div>
