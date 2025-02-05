@@ -19,15 +19,15 @@
            <p class="mt-3 text-center">Have questions? Reach out to us anytime.</p>
            <div class="mb-3">
                 <label for="name" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name" required/>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required/>
             </div>
            <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" required/>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required/>
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3">
+                <textarea class="form-control" name="message"  id="message" rows="3">
 
                 </textarea>
             </div>

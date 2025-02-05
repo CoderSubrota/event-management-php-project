@@ -44,7 +44,7 @@ INSERT INTO `participants` (`id`, `full_name`, `email`, `event_id`) VALUES
 (8, 'Anil Roy', 'anil@gmail.com', 5),
 (9, 'Subrota Chandra', 'itsectorcommunication@gmail.com', 2),
 (14, 'Subrota Chandra', 'itsectorcommunicatio3@gmail.com', 2),
-(15, 'Subrota Chandra', 'itsectorcommunication3434@gmail.com', 1),
+(15, 'Subrota Chandra', 'itevent@gmail.com', 1),
 (16, 'Subrota Chandra', 'itsectorcommunication34@gmail.com', 1),
 (18, 'David', 'david34@gmail.com', 2),
 (19, 'Johan Doe', 'johan@gmail.com', 2),

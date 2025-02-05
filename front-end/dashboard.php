@@ -68,14 +68,14 @@ require_once "../back-end/download_attendees.php";
                 }
 
                 ?>
-                <div class="flex justify-content-around flex-row">
-                    <a href="./create_event_page.php" class="btn btn-success mb-3">Create Event <i
+                <div class="d-flex  my-2 flex-md-column-reverse flex-lg-row">
+                    <a href="./create_event_page.php" class="btn btn-success mx-3 mb-3">Create Event <i
                             class="fa-solid fa-arrow-right"></i></a>
-                    <a href="./add_participant.php" class="btn btn-primary mb-3">Add participant <i
+                    <a href="./add_participant.php" class="btn btn-primary mx-3 mb-3">Add participant <i
                             class="fa-solid fa-arrow-right"></i> </a>
                     <?php
                     if (isset($_SESSION['email']) && $_SESSION['email'] == "subrota12@gmail.com") {
-                        echo ' <a href="./show_users.php" class="btn btn-success mb-3">Show users <i class="fa-solid fa-arrow-right"></i> </a> ';
+                        echo ' <a href="./show_users.php" class="btn btn-success mx-3 mb-3">Show users <i class="fa-solid fa-arrow-right"></i> </a> ';
                     }
                     ?>
                 </div>
