@@ -4,7 +4,7 @@ if (isset($_REQUEST['event_id'])) {
     $event_id = mysqli_real_escape_string($connection, $_REQUEST['event_id']);
 
     // Fetch attendee data with selected columns
-    $query = "SELECT id, full_name, email FROM participants WHERE event_id = '$event_id'";
+    $query = "SELECT id, full_name, email FROM attendees WHERE event_id = '$event_id'";
     $result = mysqli_query($connection, $query);
 
     if (!$result) {
