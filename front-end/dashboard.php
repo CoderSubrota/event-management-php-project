@@ -71,7 +71,7 @@ require_once "../back-end/download_attendees.php";
                 <div class="d-flex  my-2 flex-md-column-reverse flex-lg-row">
                     <a href="./create_event_page.php" class="btn btn-success mx-3 mb-3">Create Event <i
                             class="fa-solid fa-arrow-right"></i></a>
-                    <a href="./add_participant.php" class="btn btn-primary mx-3 mb-3">Add participant <i
+                    <a href="./add_attendee.php" class="btn btn-primary mx-3 mb-3">Add participant <i
                             class="fa-solid fa-arrow-right"></i> </a>
                     <?php
                     if (isset($_SESSION['email']) && $_SESSION['email'] == "subrota12@gmail.com") {

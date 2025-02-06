@@ -2,6 +2,36 @@
 <html lang="en">
 
 <head>
+    <style>
+        .owl-carousel .item {
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.owl-carousel {
+  perspective: 1000px;
+}
+
+.owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+}
+
+.owl-carousel .owl-item {
+  transition: transform 0.5s;
+}
+
+.owl-carousel .owl-item:hover {
+  transform: scale(1.1) rotateY(15deg);
+}
+
+.owl-carousel .item img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
     <?php require_once "./cdn.html"; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,10 +57,23 @@
             <a href="#services" class="btn btn-primary btn-lg mt-3">Explore Services</a>
         </div>
     </section>
+
     <!-- Carousel section  -->
+    <h2 class="fs-2 fw-bold text-center text-primary my-5">  Our Top Events </h2>
+
+<div class="owl-carousel my-5">
+  <div class="item"><img src="../images/f1.jpg" alt="Event 1"></div>
+  <div class="item"><img src="../images/f2.jpeg"  alt="Event 2"></div>
+  <div class="item"><img src="../images/f3.jpg"  alt="Event 3"></div>
+  <div class="item"><img src="../images/f4.jpg"  alt="Event 4"></div>
+  <div class="item"><img src="../images/f5.jpg"  alt="Event 5"></div>
+  <!-- Add more items for each event -->
+</div>
+
+
     <section>
         <div class="container mt-5">
-            <h1 class="fs-2 fw-bold text-center text-primary my-5">  Our Events </h1>
+            <h2 class="fs-2 fw-bold text-center text-primary my-5">  Our Past Events </h2>
 
             <div id="eventCarousel" class="carousel slide shadow-lg rounded overflow-hidden" data-bs-ride="carousel">
                 <!-- Indicators -->
@@ -164,11 +207,32 @@
         </div>
     </section>
 
-
-
-
     <?php require_once "./footer.html"; ?>
 
+<script>
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    items: 3,
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+});
+
+    </script>
 </body>
 
 </html>

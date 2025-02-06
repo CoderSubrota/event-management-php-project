@@ -18,7 +18,7 @@
     $result = [];
     $flag = false;
     if (isset($_REQUEST['search_attendee'])) {
-        $searchValue = $_REQUEST['search'];
+        $searchValue = mysqli_real_escape_string($connection, $_REQUEST['search']);
         $getEvents = "SELECT * FROM attendees WHERE full_name LIKE '%$searchValue%'";
         $result = mysqli_query($connection, $getEvents);
         $flag=true ;

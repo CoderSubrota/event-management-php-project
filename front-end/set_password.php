@@ -16,8 +16,8 @@ session_start() ;
 require_once "../back-end/config.php";
 
     if (isset($_POST['reset'])) {
-        $password = $_POST['password'];
-        $confirm_password = $_POST['confirm_password'];
+        $password = mysqli_real_escape_string($connection, $_POST['password']) ; 
+        $confirm_password =  mysqli_real_escape_string($connection,$_POST['confirm_password']);
         $hash_password = password_hash($password,PASSWORD_DEFAULT) ;
 
         // Regular expression for strong password validation

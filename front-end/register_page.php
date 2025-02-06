@@ -20,8 +20,8 @@
     if (isset($_POST['register'])) {
         $full_name = mysqli_real_escape_string($connection, $_POST['full_name']);
         $email = mysqli_real_escape_string($connection, $_POST['email']);
-        $password = $_POST['password'];
-        $confirm_password = $_POST['confirm_password'];
+        $password =  mysqli_real_escape_string($connection, $_POST['password']);
+        $confirm_password = mysqli_real_escape_string($connection,  $_POST['confirm_password']);
 
         // Regular expression for strong password validation
         $password_pattern = "/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[\W_]).{8,}$/";

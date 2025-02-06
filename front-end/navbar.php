@@ -14,7 +14,7 @@
         </li>
         <li class="nav-item"><a class="nav-link" href="#about"><i class="fa-regular fa-address-card me-1"></i>About</a></li>
         <li class="nav-item"><a class="nav-link" href="./search_events.php"><i class="fa-regular fa-calendar-check me-1"></i>Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="./search_attendees.php"><i class="fa-regular fa-calendar-check me-1"></i>Participants</a></li>
+        <li class="nav-item"><a class="nav-link" href="./search_attendees.php"><i class="fa-regular fa-calendar-check me-1"></i>Attendees</a></li>
         <li class="nav-item"><a class="nav-link" href="#services"><i class="fa-brands fa-servicestack me-1"></i>Services</a></li>
         <li class="nav-item"><a class="nav-link" href="./contact.php"><i class="fa-regular fa-id-card me-1"></i>Contact</a></li>
         <?php
